@@ -1,6 +1,8 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y curl wget patch git
+RUN apt-get update && apt-get install -y \
+  curl \
+  git
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 RUN useradd -ms /bin/bash alexa
@@ -14,7 +16,8 @@ RUN cp -R /home/alexa/node_modules/alexa-app-server/examples/ /home/alexa/node_m
        rm -rf /home/alexa/node_modules/alexa-app-server/api/apps/* && \
        cd /home/alexa/node_modules/alexa-app-server/api/apps/ && \
        git clone -b master https://github.com/unityfire/alexa-ha.git && \
-       rm /home/alexa/node_modules/alexa-app-server/api/server.js
+       rm /home/alexa/node_modules/alexa-app-server/api/server.js && \
+       ln -s /etc/alexa-ha-config.js /home/alexa/node_modules/alexa-app-server/api/apps/alexa-ha/config.js
 
 COPY server.js /home/alexa/node_modules/alexa-app-server/api/server.js
 
