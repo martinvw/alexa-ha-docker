@@ -1,8 +1,0 @@
-version: "3"
-services:
-   alexa-ha:
-      image: alexa-ha
-      ports:
-       - "9999:8000"
-      volumes:
-       - /meru/docker-configs/alexa-ha/config.js:/home/alexa/node_modules/alexa-app-server/api/as/alexa-ha/config.js
