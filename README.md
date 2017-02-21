@@ -4,7 +4,7 @@
 
 ## Supported tags and respective ```Dockerfile``` links
 
-* latest (https://raw.githubusercontent.com/martinvw/alexa-ha-docker/master/Dockerfile)
+* latest ([Dockerfile](https://raw.githubusercontent.com/martinvw/alexa-ha-docker/master/Dockerfile))
 
 This image is updated via pull requests to the [martinvw/alexa-ha-docker](https://github.com/martinvw/alexa-ha-docker) GitHub repo.
 
